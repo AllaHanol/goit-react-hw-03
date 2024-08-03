@@ -14,12 +14,12 @@ const App = () => {
   ]);
   const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-    if (savedContacts) {
-      setContacts(savedContacts);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+  //   if (savedContacts) {
+  //     setContacts(savedContacts);
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
