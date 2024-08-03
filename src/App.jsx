@@ -3,6 +3,8 @@ import { nanoid } from 'nanoid';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
+
+
 import './App.css';
 
 const App = () => {
@@ -14,12 +16,12 @@ const App = () => {
   ]);
   const [filter, setFilter] = useState('');
 
-  // useEffect(() => {
-  //   const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-  //   if (savedContacts) {
-  //     setContacts(savedContacts);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+    if (savedContacts) {
+      setContacts(savedContacts);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
