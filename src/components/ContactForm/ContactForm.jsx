@@ -32,7 +32,7 @@ const ContactForm = ({ addContact }) => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleFormSubmit}
-    > {({ errors }) => (
+    > 
          <Form className={css.form}>
           <label className={css.label} htmlFor={nameId}>Name</label>
         <Field className={css.field} id={nameId} name="name" />
@@ -40,9 +40,9 @@ const ContactForm = ({ addContact }) => {
         <label className={css.label} htmlFor={numberId}>Number</label>
         <Field className={css.field} id={numberId} name="number" />
         <ErrorMessage className={css.errorText} name="number" component="div" />
-        <button disabled={Object.keys(errors).length > 0} className={css.submitBtn} type="submit">Add Contact</button>
+        <button className={css.submitBtn} type="submit">Add Contact</button>
       </Form> 
-      )} 
+      
       
     </Formik>
   );

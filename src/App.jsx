@@ -3,11 +3,11 @@ import { nanoid } from 'nanoid';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
-import contacts from './db/contacts.json';
+import initialContacts from './db/contacts.json';
 
 import './App.css';
 
-  const initialContacts = [ {contacts}]
+
   const App = () => {
     const [contacts, setContacts] = useState(() => JSON.parse(localStorage.getItem('contacts')) ?? initialContacts);
     const [filter, setFilter] = useState('');
