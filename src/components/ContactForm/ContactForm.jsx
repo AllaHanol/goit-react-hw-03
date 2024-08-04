@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
-import { nanoid } from 'nanoid';
+
 import css from './ContactForm.module.css';
 
 
@@ -21,7 +21,7 @@ const ContactForm = ({ addContact }) => {
   });
   
   const handleFormSubmit = (values, actions) => {
-    values.id = nanoid(5);
+    
     addContact(values.name, values.number);
     actions.resetForm();
    
