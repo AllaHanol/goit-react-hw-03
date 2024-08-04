@@ -7,8 +7,7 @@ import contacts from './db/contacts.json';
 
 import './App.css';
 
-  const initialContacts = [ {contacts}
-  ]
+  const initialContacts = [ {contacts}]
   const App = () => {
     const [contacts, setContacts] = useState(() => JSON.parse(localStorage.getItem('contacts')) ?? initialContacts);
     const [filter, setFilter] = useState('');
@@ -44,13 +43,13 @@ import './App.css';
     };
 
     return (
-      <div>
+      <>
         <h1>Phonebook</h1>
         <ContactForm addContact={addContact} />
         <h2>Contacts</h2>
         <SearchBox filter={filter} onFilterChange={handleFilterChange} />
         <ContactList contacts={getFilteredContacts()} onDeleteContact={deleteContact} />
-      </div>
+      </>
     );
   };
 
