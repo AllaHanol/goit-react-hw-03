@@ -1,4 +1,4 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field, Form, Formik, } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
 
@@ -32,7 +32,7 @@ const ContactForm = ({ addContact }) => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={handleFormSubmit}
-      > {({ errors }) => (
+    > {({ errors }) => (
          <Form className={css.form}>
           <label className={css.label} htmlFor={nameId}>Name</label>
         <Field className={css.field} id={nameId} name="name" />
