@@ -13,7 +13,6 @@ import './App.css';
     const [filter, setFilter] = useState('');
 
   
-
     useEffect(() => {
       localStorage.setItem('contacts', JSON.stringify(contacts));
     }, [contacts]);
